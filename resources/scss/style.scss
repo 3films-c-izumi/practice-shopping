@@ -1,15 +1,10 @@
 @charset "UTF-8";
 
 // ==================================================
-// reset
-// ==================================================
-
-@use 'normalize.css' as *;
-
-// ==================================================
 // foundation
 // ==================================================
 
 @use "foundation/_font.scss" as *;
 @use "foundation/_color.scss" as *;
+@use "foundation/_reset.scss" as *;
 @use "foundation/_base.scss" as *;
