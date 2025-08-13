@@ -4,6 +4,6 @@
 // foundation
 // ==================================================
 
-@import "foundation/_font.scss";
-@import "foundation/_color.scss";
-@import "foundation/_base.scss";
+@use "foundation/_font.scss" as *;
+@use "foundation/_color.scss" as *;
+@use "foundation/_base.scss" as *;
