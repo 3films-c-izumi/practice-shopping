@@ -1,0 +1,15 @@
+@use "../foundation/color" as *;
+
+.l-header {
+  background-color: $c-main;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 45px;
+  &__title {
+    font-size: 20px;
+    color: $c-base;
+  }
+}

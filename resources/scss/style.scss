@@ -8,3 +8,10 @@
 @use "foundation/_color.scss" as *;
 @use "foundation/_reset.scss" as *;
 @use "foundation/_base.scss" as *;
+
+// ==================================================
+// layout
+// ==================================================
+
+@use "layout/_header.scss" as *;
+@use "layout/_footer.scss" as *;

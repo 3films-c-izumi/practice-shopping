@@ -1,3 +1,4 @@
+@use "../foundation/color" as *;
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -5,7 +6,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  color: #333;
+  color: $c-text;
+  background-color: $c-base;
 }
 a {
   color: inherit;
@@ -34,4 +36,8 @@ button {
   border: none;
   color: inherit;
   cursor: pointer;
+}
+main {
+  position: relative;
+  top: 45px;
 }
