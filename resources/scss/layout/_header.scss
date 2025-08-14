@@ -7,11 +7,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  height: 45px;
+  height: 46px;
   &__title {
-    font-size: 20px;
     color: $c-base;
-    font-family: monospace;
     font-size: 30px;
+    padding-left: 10px;
   }
 }

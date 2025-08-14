@@ -3,9 +3,9 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "ヒラギノ丸ゴ ProN";
   color: $c-text;
   background-color: $c-base;
 }
@@ -39,5 +39,14 @@ button {
 }
 main {
   position: relative;
-  top: 45px;
+  top: 46px;
+}
+
+input[type="text"], input[type="password"] {
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    outline: none;
+  }
 }

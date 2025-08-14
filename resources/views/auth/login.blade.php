@@ -4,6 +4,18 @@
 
 @section('content')
 
+@if ($errors->has('verify'))
+<div>
+    <span>{{ $errors->first('verify') }}</span>
+</div>
+@endif
+
+@if (session('status'))
+<div>
+    <span>{{ session('status') }}</span>
+</div>
+@endif
+
 <div>
     <h1>ログイン</h1>
     <form method="POST">

@@ -26,7 +26,7 @@ class RegisterController extends Controller
             '*.string'     => '使用できない文字が含まれています',
             '*.confirmed'  => '確認用パスワードが一致しません',
             'email.email'  => '正しい形式で入力してください',
-            'email.unique' => 'このメールアドレスはすでに使用されています。',
+            'email.unique' => 'このメールアドレスはすでに使用されています',
         ];
         $validated = $request->validate([
             'last_name' => ['required', 'string', 'max:255'],
@@ -102,7 +102,7 @@ class RegisterController extends Controller
         $user = User::where('verification_token', $token)->first();
 
         if (!$user) {
-            return redirect('/login')->withErrors(['email' => '無効な認証リンクです。']);
+            return redirect('/login')->withErrors(['verify' => 'リンクが無効です']);
         }
 
         $user->is_verified = true;
