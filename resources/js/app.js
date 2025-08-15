@@ -19,4 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }, {once: true});
     }, duration);
   }
+
+  const toastMessageID = document.getElementById('js-toast-message');
+  if (toastMessageID) {
+    toastMessageID.style.display = 'block';
+    showToast(toastMessageID.textContent);
+    toastMessageID.style.display = 'none';
+  }
 })

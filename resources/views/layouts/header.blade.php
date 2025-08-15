@@ -3,8 +3,8 @@
         <a href="{{ route('home') }}"><h1 class="l-header__title">practice-shopping</h1></a>
     </div>
     <div class="c-toast" id="js-toast">
-        @if (session('toast'))
-        <div class="c-toast__message js-tastMessage">{{ session('toast') }}</div>
-        @endif
     </div>
+    @if (session('toast'))
+    <div id="js-toast-message" style="display: none;">{{ session('toast') }}</div>
+    @endif
 </header>
