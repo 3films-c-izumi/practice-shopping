@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 // ログイン
 Route::get('/login', [LoginController::class, 'ShowLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 // アカウント作成
 Route::get('/register', [RegisterController::class, 'ShowRegistrationForm'])->name('register.form');

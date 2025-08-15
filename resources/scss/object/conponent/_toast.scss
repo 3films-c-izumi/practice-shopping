@@ -1,0 +1,28 @@
+@use "../../foundation/color" as *;
+
+.c-toast {
+  position: fixed;
+  bottom: 0;
+  margin: auto auto 0px auto;
+  width: 100%;
+
+  &__message {
+    background-color: $c-accent;
+    border: 2px solid $c-text;
+    box-shadow: 5px 5px $c-text;
+    color: $c-base;
+    font-size: 20px;
+    margin: 0px auto 10px auto;
+    opacity: 0;
+    padding: 3px 18px 3px 18px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: fit-content;
+  }
+
+  & .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
