@@ -43,6 +43,8 @@ main {
 }
 
 input[type="text"], input[type="password"] {
+  background-color: $c-base;
+  border: 1px solid $c-text;
   &:focus {
     outline: none;
   }

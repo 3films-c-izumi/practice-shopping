@@ -60,7 +60,7 @@
             <label for="register-password-confirm">パスワード（確認用）</label>
             <input type="password" name="password_confirmation" id="register-password-confirm">
         </div>
-        <input type="submit" value="確認" class="c-next-button">
+        <input type="submit" value="確認" class="c-button--primary">
     </form>
 </div>
 
