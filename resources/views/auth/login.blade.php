@@ -4,29 +4,27 @@
 
 @section('content')
 
-@if ($errors->has('verify'))
-<div>
-    <span>{{ $errors->first('verify') }}</span>
-</div>
+@if ($errors->has('error'))
+<div id="js-toast-message" style="display: none;">{{ $errors->first('error') }}</div>
 @endif
 
-@if (session('status'))
-<div>
-    <span>{{ session('status') }}</span>
-</div>
-@endif
-
-<div>
-    <h1>ログイン</h1>
+<div class="p-login">
+    <h1 class="p-login__title">ログイン</h1>
     <form action="{{ route('login') }}" method="POST">
         @csrf
-        <div>
-            <label for="login-email">メールアドレス</label>
-            <input type="text" name="email" id="login-email">
+        <div class="c-form-group js-formGroup">
+            <label for="login-email" class="c-form-group__label js-formGroupLabel">メールアドレス</label>
+            <input type="text" name="email" id="login-email" value="{{ old('email', request('email')) }}" class="c-form-group__input js-formGroupInput">
+            @error('email')
+            <span>{{ $message }}</span>
+            @enderror
         </div>
-        <div>
-            <label for="login-password">パスワード</label>
-            <input type="password" name="password" id="login-password">
+        <div class="c-form-group js-formGroup">
+            <label for="login-password" class="c-form-group__label js-formGroupLabel">パスワード</label>
+            <input type="password" name="password" id="login-password" value="{{ old('password', request('password')) }}" class="c-form-group__input js-formGroupInput">
+            @error('password')
+            <span>{{ $message }}</span>
+            @enderror
         </div>
         <input type="submit" value="ログイン" class="c-button--primary">
     </form>

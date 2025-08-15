@@ -66,7 +66,7 @@ class RegisterController extends Controller
 
         $request->session()->forget('register_data');
 
-        return redirect()->route('login')->with('status', '認証メールを送信しました。メールをご確認ください。');
+        return redirect()->route('login')->with('toast', '認証メールを送信しました。メールをご確認ください。');
     }
 
     private function sendVerificationEmail($user)
@@ -102,13 +102,13 @@ class RegisterController extends Controller
         $user = User::where('verification_token', $token)->first();
 
         if (!$user) {
-            return redirect('/login')->withErrors(['verify' => 'リンクが無効です']);
+            return redirect('/register')->with(['toast' => 'リンクが無効です。最初からお試しください。']);
         }
 
         $user->is_verified = true;
         $user->verification_token = null;
         $user->save();
 
-        return redirect('/login')->with('status', 'メール認証が完了しました。ログインしてください。');
+        return redirect('/login')->with('toast', 'メール認証が完了しました。ログインしてください。');
     }
 }

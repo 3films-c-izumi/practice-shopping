@@ -2,21 +2,21 @@
 
 .c-toast {
   position: fixed;
-  bottom: 0;
-  margin: auto auto 0px auto;
+  top: 46px;
+  margin: 0px auto 0px auto;
   width: 100%;
-
+  z-index: 1;
   &__message {
     background-color: $c-accent;
     border: 2px solid $c-text;
     box-shadow: 5px 5px $c-text;
     color: $c-base;
     font-size: 20px;
-    margin: 0px auto 10px auto;
+    margin: 10px auto 0px auto;
     opacity: 0;
     padding: 3px 18px 3px 18px;
     text-align: center;
-    transform: translateY(300%);
+    transform: translateY(-300%);
     transition: opacity 1s ease, transform 1s ease;
     width: fit-content;
   }

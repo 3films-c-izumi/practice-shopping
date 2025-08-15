@@ -1,23 +1,14 @@
 @use "../../foundation/color" as *;
 
-.p-register {
+.p-login {
   width: 600px;
   height: 500px;
   border: 2px solid $c-text;
   box-shadow: 5px 5px $c-text;
   margin: 20px auto 0px auto;
   padding: 20px;
-  &__form {
-    &__name-area {
-      display: flex;
-    }
-  }
 
   &__title {
     font-size: 30px;
-  }
-
-  &__description {
-    font-size: 20px;
   }
 }

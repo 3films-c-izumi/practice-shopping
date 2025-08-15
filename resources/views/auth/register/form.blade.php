@@ -8,8 +8,8 @@
     @if ($errors->has('session'))
     <span>{{ $errors->first('session') }}</span>
     @endif
-    <h1>アカウント作成</h1>
-    <h2>アカウント情報の入力</h2>
+    <h1 class="p-register__title">アカウント作成</h1>
+    <h2 class="p-register__description">アカウント情報の入力</h2>
     <form action="/register/confirm" method="POST">
         @csrf
         <div>

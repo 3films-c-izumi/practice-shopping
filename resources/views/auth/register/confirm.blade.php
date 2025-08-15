@@ -5,8 +5,8 @@
 @section('content')
 
 <div class="p-register">
-    <h1>アカウント作成</h1>
-    <h2>入力内容の確認</h2>
+    <h1 class="p-register__title">アカウント作成</h1>
+    <h2 class="p-register__description">入力内容の確認</h2>
     <form action="{{ route('register') }}" method="post">
         @csrf
         <dl>
